@@ -10,3 +10,12 @@
 .flex{
   display: flex;
 }
+
+
+h1{
+  font-size: xx-large;
+}
+
+button{
+  padding: 7px 14px;
+}

@@ -1,4 +1,5 @@
-import { useState } from "react";
+
+import {  useEffect, useState } from "react";
 import "./App.css";
 import Nav from "./Nav";
 
@@ -6,9 +7,22 @@ import Nav from "./Nav";
 
 function App() {
 
-  // console.log("helle re-render");
+  console.log("helle re-render");
 
-  const [colors, setColors] = useState("")
+// React useState Hook allows us to track state in a  function component
+// accepts inti value  return  [current value, update function]
+ const [colors,setColors] = useState("")
+//  current colors
+// update function setColors
+
+
+// useEffect Hook allows you to proform side effects in our components
+// accepts two arguments & second arg optional
+useEffect(()=>{
+
+  console.log("hello from useEffect....");
+
+},[colors])
 
 
   return (
