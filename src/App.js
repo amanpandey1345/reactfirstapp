@@ -1,38 +1,48 @@
-
-import {  useEffect, useState } from "react";
-import "./App.css";
-import Nav from "./Nav";
-
+import React, { createContext, useContext, useState } from 'react'
+import DataContext from './store';
+import Count from './Count';
 
 
-function App() {
+const UserData = createContext();
 
-  console.log("helle re-render");
+const App = () => {
 
-// React useState Hook allows us to track state in a  function component
-// accepts inti value  return  [current value, update function]
- const [colors,setColors] = useState("")
-//  current colors
-// update function setColors
-
-
-// useEffect Hook allows you to proform side effects in our components
-// accepts two arguments & second arg optional
-useEffect(()=>{
-
-  console.log("hello from useEffect....");
-
-},[colors])
-
+  const [data, setData] = useState("Aman")
+  const [data1, setData1] = useState("Pandey")
 
   return (
-    <>
-      <div className="app" style={{background:colors}}>
-        <input type="color" onChange={(e)=> setColors(e.target.value)}  />
-      </div>
-<Nav/>
-    </>
-  );
+  <DataContext.Provider value={data1}>
+    <UserData.Provider value={data}>
+    <div>App
+      <input type="text" onChange={(e)=> setData(e.target.value)} />
+      <input type="text" onChange={(e)=> setData1(e.target.value)} />
+      <Box />
+      <Count/>
+
+    </div>
+    </UserData.Provider>
+    
+    </DataContext.Provider >
+  )
 }
 
-export default App;
+export default App
+
+
+
+
+const Box = () => {
+
+
+  const user = useContext(UserData)
+  const data = useContext(DataContext)
+
+  return (
+    <div>
+      Box 
+      <h1>{user}</h1>
+      <h1>hello this is store data:- {data}</h1>
+    </div>
+  )
+}
+

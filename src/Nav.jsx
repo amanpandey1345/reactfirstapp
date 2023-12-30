@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 const Nav = () => {
+
+
   return (
-    <div>
+    <div className='m1'>
         <h1>Navbar</h1>
         
     </div>

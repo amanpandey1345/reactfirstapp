@@ -1,6 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, {  useContext, useEffect, useState } from "react";
 import "./App.css";
+import DataContext from "./store";
+
+
 const Count = () => {
+  const d = useContext(DataContext)
   const [value, setvalue] = useState(0);
   const [value1, setValue1] = useState(0);
 
@@ -8,6 +12,8 @@ const Count = () => {
     setValue1(value ** 2);
   }, [value]);
 
+
+  
 
   useEffect(() => {
 
@@ -24,6 +30,10 @@ const Count = () => {
 
   return (
     <div>
+      <h1>
+
+    count components context value :{d}
+      </h1>
       <h1>Number:- {value}</h1>
       <h1>Square:- {value1}</h1>
       <button onClick={() => setvalue(value + 1)}>+</button>
