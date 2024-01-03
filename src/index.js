@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import Count from './Count';
 import Blog from './Blog';
+import Hellocomp from './Hellocomp';
 
 
 
@@ -16,7 +17,8 @@ root.render(
 
     {/* <App /> */}
     {/* <Count/> */}
-    <Blog/>
+    {/* <Blog/> */}
+    <Hellocomp/>
 
   </React.StrictMode>
 );

@@ -1,11 +1,20 @@
 import React, { useState } from 'react'
 import "./App.css";
 import Card from './Card';
+import neha from "./logo.png"
 const Blog = () => {
 
     const [show, setshow] = useState(true)
 
   return (
+    <>
+    {/* import img */}
+    <img className='imgss' src={neha} alt="" />
+    {/* public img */}
+    <img className='imgss' src={"logo512.png"} alt="" />
+    {/* url img */}
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5iXKvoy70BHIa9jyXVQ7LhDG_jci7grD0LA&usqp=CAU" alt="" />
+
     <div className='m1'>
         <button onClick={()=>setshow(!show)}>{show ? "Hide Card":"Show Card"}</button>
         <br />
@@ -18,6 +27,7 @@ const Blog = () => {
         }
      
     </div>
+    </>
   )
 }
 
