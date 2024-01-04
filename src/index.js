@@ -5,6 +5,9 @@ import App from './App';
 import Count from './Count';
 import Blog from './Blog';
 import Hellocomp from './Hellocomp';
+import ComForm from './ComForm';
+import ComEvent from './ComEvent';
+import ComList from './ComList';
 
 
 
@@ -18,7 +21,10 @@ root.render(
     {/* <App /> */}
     {/* <Count/> */}
     {/* <Blog/> */}
-    <Hellocomp/>
+    {/* <Hellocomp/> */}
+    {/* <ComForm /> */}
+    {/* <ComEvent/> */}
+    <ComList />
 
   </React.StrictMode>
 );

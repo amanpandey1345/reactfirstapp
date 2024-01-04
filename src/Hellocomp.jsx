@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import "./App.css";
 const Hellocomp = () => {
 
-    
+  const [show, setShow] = useState(false)
+  const [value, setValue] = useState("")
+
   return (
     <>
       <div className="m1">
